@@ -5,8 +5,8 @@
 <title>Picker</title>
 <style>
 body {
-    background:#FFF;
-    color:#000;
+    background:#000;
+    color:#FFF;
     font-family:verdana, sans-serif;
     font-size:10pt;
     margin:0;
@@ -118,7 +118,7 @@ button.disabled:hover {
     vertical-align:top;
     overflow:hidden;
     border-radius:100%;
-    background:#F7F7F7;
+    background:#000000;
     color:#000;
 }
 
@@ -167,15 +167,15 @@ button.disabled:hover {
 }
 
 .item-list li:hover {
-    background:#CDF;
+    background:#AA3333;
 }
 
 .item-list.sorting li:hover {
-    background:#F7F7F7;
+    background:#AA3333;
 }
 
 #evaluating li.selected {
-    border:3px solid #7AC;
+    border:3px solid #AA3333;
 }
 
 #evaluating, #buttons {
@@ -234,7 +234,80 @@ button.disabled:hover {
 'use strict';
 
 var items = [
-    // Define your items here
+ {id: 'Mario', name: 'Mario', image: 'images/Mario.png'},
+ {id: 'DonkeyKong', name: 'Donkey Kong', image: 'images/Donkey Kong.png'},
+ {id: 'Link', name: 'Link', image: 'images/Link.png'},
+ {id: 'Samus', name: 'Samus', image: 'images/Samus.png'},
+ {id: 'DarkSamus', name: 'Dark Samus', image: 'images/Dark Samus.png'},
+ {id: 'Yoshi', name: 'Yoshi', image: 'images/Yoshi.png'},
+ {id: 'Kirby', name: 'Kirby', image: 'images/Kirby.png'},
+ {id: 'Fox', name: 'Fox', image: 'images/Fox.png'},
+ {id: 'Pikachu', name: 'Pikachu', image: 'images/Pikachu.png'},
+ {id: 'Luigi', name: 'Luigi', image: 'images/Luigi.png'},
+ {id: 'Ness', name: 'Ness', image: 'images/Ness.png'},
+ {id: 'CaptainFalcon', name: 'Captain Falcon', image: 'images/Captain Falcon.png'},
+ {id: 'Jigglypuff', name: 'Jigglypuff', image: 'images/Jigglypuff.png'},
+ {id: 'Peach', name: 'Peach', image: 'images/Peach.png'},
+ {id: 'Daisy', name: 'Daisy', image: 'images/Daisy.png'},
+ {id: 'Bowser', name: 'Bowser', image: 'images/Bowser.png'},
+ {id: 'IceClimbers', name: 'Ice Climbers', image: 'images/Ice Climbers.png'},
+ {id: 'Sheik', name: 'Sheik', image: 'images/Sheik.png'},
+ {id: 'Zelda', name: 'Zelda', image: 'images/Zelda.png'},
+ {id: 'DrMario', name: 'Dr. Mario', image: 'images/Dr Mario.png'},
+ {id: 'Pichu', name: 'Pichu', image: 'images/Pichu.png'},
+ {id: 'Falco', name: 'Falco', image: 'images/Falco.png'},
+ {id: 'Marth', name: 'Marth', image: 'images/Marth.png'},
+ {id: 'Lucina', name: 'Lucina', image: 'images/Lucina.png'},
+ {id: 'YoungLink', name: 'Young Link', image: 'images/Young Link.png'},
+ {id: 'Ganondorf', name: 'Ganondorf', image: 'images/Ganondorf.png'},
+ {id: 'Mewtwo', name: 'Mewtwo', image: 'images/Mewtwo.png'},
+ {id: 'Roy', name: 'Roy', image: 'images/Roy.png'},
+ {id: 'Chrom', name: 'Chrom', image: 'images/Chrom.png'},
+ {id: 'MrGameWatch', name: 'Mr. Game & Watch', image: 'images/Mr Game And Watch.png'},
+ {id: 'MetaKnight', name: 'Meta Knight', image: 'images/Meta Knight.png'},
+ {id: 'Pit', name: 'Pit', image: 'images/Pit.png'},
+ {id: 'DarkPit', name: 'Dark Pit', image: 'images/Dark Pit.png'},
+ {id: 'ZeroSuitSamus', name: 'Zero Suit Samus', image: 'images/Zero Suit Samus.png'},
+ {id: 'Wario', name: 'Wario', image: 'images/Wario.png'},
+ {id: 'Snake', name: 'Snake', image: 'images/Snake.png'},
+ {id: 'Ike', name: 'Ike', image: 'images/Ike.png'},
+ {id: 'Pokemon Trainer', name: 'Pokemon Trainer', image: 'images/Pokemon Trainer.png'},
+ {id: 'DiddyKong', name: 'Diddy Kong', image: 'images/Diddy Kong.png'},
+ {id: 'Lucas', name: 'Lucas', image: 'images/Lucas.png'},
+ {id: 'Sonic', name: 'Sonic', image: 'images/Sonic.png'},
+ {id: 'KingDedede', name: 'King Dedede', image: 'images/King Dedede.png'},
+ {id: 'Olimar', name: 'Olimar', image: 'images/Olimar.png'},
+ {id: 'Lucario', name: 'Lucario', image: 'images/Lucario.png'},
+ {id: 'ROB.', name: 'R.O.B.', image: 'images/ROB.png'},
+ {id: 'ToonLink', name: 'Toon Link', image: 'images/Toon Link.png'},
+ {id: 'Wolf', name: 'Wolf', image: 'images/Wolf.png'},
+ {id: 'Villager', name: 'Villager', image: 'images/Villager.png'},
+ {id: 'MegaMan', name: 'Mega Man', image: 'images/Mega Man.png'},
+ {id: 'WiiFitTrainer', name: 'Wii Fit Trainer', image: 'images/Wii Fit Trainer.png'},
+ {id: 'Rosalina & Luma', name: 'Rosalina & Luma', image: 'images/Rosalina And Luma.png'},
+ {id: 'LittleMac', name: 'Little Mac', image: 'images/Little Mac.png'},
+ {id: 'Greninja', name: 'Greninja', image: 'images/Greninja.png'},
+ {id: 'Palutena', name: 'Palutena', image: 'images/Palutena.png'},
+ {id: 'PacMan', name: 'Pac-Man', image: 'images/Pac-Man.png'},
+ {id: 'Robin', name: 'Robin', image: 'images/Robin.png'},
+ {id: 'Shulk', name: 'Shulk', image: 'images/Shulk.png'},
+ {id: 'BowserJr', name: 'Bowser Jr.', image: 'images/Bowser Jr.png'},
+ {id: 'Duck Hunt', name: 'Duck Hunt', image: 'images/Duck Hunt.png'},
+ {id: 'Ryu', name: 'Ryu', image: 'images/Ryu.png'},
+ {id: 'Ken', name: 'Ken', image: 'images/Ken.png'},
+ {id: 'Cloud', name: 'Cloud', image: 'images/Cloud.png'},
+ {id: 'Corrin', name: 'Corrin', image: 'images/Corrin.png'},
+ {id: 'Bayonetta', name: 'Bayonetta', image: 'images/Bayonetta.png'},
+ {id: 'Inkling', name: 'Inkling', image: 'images/Inkling.png'},
+ {id: 'Ridley', name: 'Ridley', image: 'images/Ridley.png'},
+ {id: 'Simon', name: 'Simon', image: 'images/Simon.png'},
+ {id: 'Richter', name: 'Richter', image: 'images/Richter.png'},
+ {id: 'KingKRool', name: 'King K. Rool', image: 'images/King K Rool.png'},
+ {id: 'Isabelle', name: 'Isabelle', image: 'images/Isabelle.png'},
+ {id: 'Incineroar', name: 'Incineroar', image: 'images/Incineroar.png'},
+ {id: 'MiiBrawler', name: 'Mii Brawler', image: 'images/Mii Brawler.png'},
+ {id: 'MiiSwordfighter', name: 'Mii Swordfighter', image: 'images/Mii Swordfighter.png'},
+ {id: 'MiiGunner', name: 'Mii Gunner', image: 'images/Mii Gunner.png'}
 ];
 
 var myPicker = new picker.Picker({
